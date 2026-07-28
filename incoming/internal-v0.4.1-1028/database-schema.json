@@ -1,8 +1,0 @@
-{
-  "schemaVersion": 26,
-  "supportedUpgradeFrom": {
-    "minimum": 1,
-    "maximum": 26
-  },
-  "downgradeSupported": false
-}
