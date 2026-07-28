@@ -198,7 +198,7 @@ jobs:
           $activated = $false
           for ($attempt = 1; $attempt -le 12 -and -not $activated; $attempt += 1) {
             try {
-              $live = Invoke-RestMethod -Uri "$manifestUrl?release=$($request.version)&attempt=$attempt"
+              $live = Invoke-RestMethod -Uri "${manifestUrl}?release=$($request.version)&attempt=$attempt"
               $activated = $live.version -eq $request.version -and $live.paralith.edition -eq $request.channel
             } catch {
               if ($attempt -eq 12) { throw }
