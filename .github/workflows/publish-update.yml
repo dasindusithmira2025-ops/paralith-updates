@@ -1,0 +1,207 @@
+name: Publish staged PARALITH update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'incoming/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paralith-update-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate, publish, and atomically activate staged update
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          function Get-VersionParts([string]$Value) {
+            if ($Value -notmatch '^(\d+)\.(\d+)\.(\d+)(?:-(\d+))?$') {
+              throw "Unsupported PARALITH release version '$Value'."
+            }
+            return @([int]$Matches[1], [int]$Matches[2], [int]$Matches[3], $(if ($Matches[4]) { [int]$Matches[4] } else { [int]::MaxValue }))
+          }
+
+          function Assert-VersionAdvances([string]$Current, [string]$Next) {
+            if (-not $Current) { return }
+            $left = Get-VersionParts $Current
+            $right = Get-VersionParts $Next
+            for ($index = 0; $index -lt $left.Count; $index += 1) {
+              if ($right[$index] -gt $left[$index]) { return }
+              if ($right[$index] -lt $left[$index]) {
+                throw "Refusing to replace $Current with non-advancing version $Next."
+              }
+            }
+            throw "Refusing to replace $Current with non-advancing version $Next."
+          }
+
+          function Get-BlobSha([string]$Revision, [string]$Path) {
+            git cat-file -e "${Revision}:$Path" 2>$null
+            if ($LASTEXITCODE -ne 0) { return '' }
+            return (git rev-parse "${Revision}:$Path").Trim()
+          }
+
+          $requests = @(Get-ChildItem -LiteralPath incoming -Filter request.json -File -Recurse -ErrorAction SilentlyContinue)
+          if ($requests.Count -eq 0) {
+            Write-Host 'No pending publication request remains.'
+            exit 0
+          }
+          if ($requests.Count -ne 1) {
+            throw "Expected exactly one serialized publication request, found $($requests.Count)."
+          }
+
+          $requestPath = $requests[0].FullName
+          $batch = $requests[0].Directory
+          $request = Get-Content -LiteralPath $requestPath -Raw | ConvertFrom-Json
+          if ($request.schemaVersion -ne 1) { throw 'Unsupported publication request schema.' }
+          if ($request.repository -ne $env:GITHUB_REPOSITORY) { throw 'Publication request repository identity is wrong.' }
+          if ($request.channel -notin @('preview', 'stable')) { throw 'Publication request channel is invalid.' }
+          if ($request.tag -notmatch '^[A-Za-z0-9._-]+$' -or -not $request.tag.EndsWith($request.version)) {
+            throw 'Publication request tag is invalid or does not match its version.'
+          }
+
+          $files = @(Get-ChildItem -LiteralPath $batch.FullName -File | Where-Object Name -ne 'request.json')
+          $metadata = @('build-metadata.json', 'checksums.sha256', 'database-schema.json', 'latest.json', 'release-manifest.json', 'release-notes.md')
+          foreach ($file in $files) {
+            $isInstaller = $file.Name -match '^PARALITH.*(\.msi|-setup\.exe)$'
+            $isSignature = $file.Name -match '^PARALITH.*(\.msi|-setup\.exe)\.sig$'
+            if ($file.Name -notin $metadata -and -not $isInstaller -and -not $isSignature) {
+              throw "Staged file '$($file.Name)' is not permitted in the public update repository."
+            }
+          }
+
+          $installers = @($files | Where-Object Name -Match '^PARALITH.*(\.msi|-setup\.exe)$')
+          if (@($installers | Where-Object Extension -EQ '.msi').Count -ne 1) { throw 'Exactly one MSI is required.' }
+          if (@($installers | Where-Object Name -Like '*-setup.exe').Count -ne 1) { throw 'Exactly one NSIS installer is required.' }
+          foreach ($installer in $installers) {
+            if (-not (Test-Path -LiteralPath "$($installer.FullName).sig")) {
+              throw "Updater signature for '$($installer.Name)' is missing."
+            }
+          }
+          foreach ($required in @('checksums.sha256', 'latest.json', 'release-manifest.json', 'release-notes.md')) {
+            if (-not (Test-Path -LiteralPath (Join-Path $batch.FullName $required))) {
+              throw "Required public artifact '$required' is missing."
+            }
+          }
+
+          $manifestPath = Join-Path $batch.FullName 'latest.json'
+          $manifestHash = (Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($manifestHash -ne $request.manifestSha256) { throw 'The staged manifest hash does not match its publication request.' }
+          $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+          if ($manifest.version -ne $request.version) { throw 'Manifest version does not match the publication request.' }
+          if ($manifest.paralith.edition -ne $request.channel -or $manifest.paralith.channel -ne $request.channel) {
+            throw 'Manifest channel or edition identity is wrong.'
+          }
+          if (-not [string]$manifest.notes) { throw 'Manifest release notes are missing.' }
+          $releaseBase = "https://github.com/$env:GITHUB_REPOSITORY/releases/download/$($request.tag)/"
+          foreach ($platform in $manifest.platforms.PSObject.Properties) {
+            if (-not ([string]$platform.Value.url).StartsWith($releaseBase, [System.StringComparison]::Ordinal)) {
+              throw "Manifest platform '$($platform.Name)' points outside this release."
+            }
+            if (-not [string]$platform.Value.signature) {
+              throw "Manifest platform '$($platform.Name)' has no updater signature."
+            }
+          }
+
+          $checksumPath = Join-Path $batch.FullName 'checksums.sha256'
+          foreach ($line in Get-Content -LiteralPath $checksumPath) {
+            if (-not $line.Trim()) { continue }
+            if ($line -notmatch '^([0-9a-fA-F]{64})\s+\*?(.+)$') { throw "Malformed checksum line: $line" }
+            $expectedHash = $Matches[1].ToLowerInvariant()
+            $checkedPath = Join-Path $batch.FullName $Matches[2]
+            if (-not (Test-Path -LiteralPath $checkedPath -PathType Leaf)) { throw "Checksum references missing file '$($Matches[2])'." }
+            $actualHash = (Get-FileHash -LiteralPath $checkedPath -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actualHash -ne $expectedHash) { throw "Checksum mismatch for '$($Matches[2])'." }
+          }
+
+          $channelPath = "channels/$($request.channel)/latest.json"
+          $initialManifestSha = Get-BlobSha HEAD $channelPath
+          if ($initialManifestSha) {
+            $current = git show "HEAD:$channelPath" | ConvertFrom-Json
+            Assert-VersionAdvances ([string]$current.version) ([string]$request.version)
+          }
+
+          gh release view $request.tag --repo $env:GITHUB_REPOSITORY *> $null
+          if ($LASTEXITCODE -eq 0) {
+            $download = Join-Path $env:RUNNER_TEMP "existing-$($request.tag)"
+            New-Item -ItemType Directory -Path $download | Out-Null
+            gh release download $request.tag --repo $env:GITHUB_REPOSITORY --pattern checksums.sha256 --dir $download
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to inspect the existing release checksums.' }
+            $existing = (Get-Content -LiteralPath (Join-Path $download 'checksums.sha256') -Raw).Replace("`r`n", "`n")
+            $staged = (Get-Content -LiteralPath $checksumPath -Raw).Replace("`r`n", "`n")
+            if ($existing -ne $staged) { throw "Published release '$($request.tag)' exists with different checksums." }
+          } else {
+            $assetPaths = @($files | ForEach-Object FullName)
+            $releaseArguments = @('release', 'create', [string]$request.tag) + $assetPaths + @(
+              '--repo', $env:GITHUB_REPOSITORY,
+              '--title', [string]$request.title,
+              '--notes-file', (Join-Path $batch.FullName 'release-notes.md'),
+              '--target', 'main'
+            )
+            if ($request.prerelease) { $releaseArguments += '--prerelease' }
+            & gh @releaseArguments
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to create the public GitHub Release.' }
+          }
+
+          $urls = @($manifest.platforms.PSObject.Properties | ForEach-Object { [string]$_.Value.url } | Select-Object -Unique)
+          foreach ($url in $urls) {
+            $verified = $false
+            for ($attempt = 1; $attempt -le 12 -and -not $verified; $attempt += 1) {
+              try {
+                $response = Invoke-WebRequest -Uri $url -Method Head -MaximumRedirection 10
+                $verified = $response.StatusCode -eq 200 -and [long]$response.Headers.'Content-Length' -gt 0
+              } catch {
+                if ($attempt -eq 12) { throw }
+                Start-Sleep -Seconds 5
+              }
+            }
+            if (-not $verified) { throw "Public release asset was not anonymously reachable: $url" }
+          }
+
+          New-Item -ItemType Directory -Path (Split-Path $channelPath) -Force | Out-Null
+          Copy-Item -LiteralPath $manifestPath -Destination $channelPath -Force
+          Remove-Item -LiteralPath $batch.FullName -Recurse -Force
+          git config user.name 'paralith-release-bot'
+          git config user.email 'paralith-release-bot@users.noreply.github.com'
+          git add -- $channelPath incoming
+          git commit -m "release($($request.channel)): activate PARALITH $($request.version)"
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to commit manifest activation.' }
+
+          git fetch origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to refresh the public update repository before activation.' }
+          $remoteManifestSha = Get-BlobSha origin/main $channelPath
+          if ($remoteManifestSha -ne $initialManifestSha) {
+            throw 'Channel activation rejected a stale manifest SHA.'
+          }
+          git rebase origin/main
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to serialize manifest activation with the latest public repository state.' }
+          git push origin HEAD:main
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to activate the public channel manifest.' }
+
+          $manifestUrl = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/main/$channelPath"
+          $activated = $false
+          for ($attempt = 1; $attempt -le 12 -and -not $activated; $attempt += 1) {
+            try {
+              $live = Invoke-RestMethod -Uri "$manifestUrl?release=$($request.version)&attempt=$attempt"
+              $activated = $live.version -eq $request.version -and $live.paralith.edition -eq $request.channel
+            } catch {
+              if ($attempt -eq 12) { throw }
+            }
+            if (-not $activated) { Start-Sleep -Seconds 5 }
+          }
+          if (-not $activated) { throw 'Anonymous channel manifest verification failed after activation.' }
+          Write-Host "Published and anonymously verified PARALITH $($request.channel) $($request.version)."
