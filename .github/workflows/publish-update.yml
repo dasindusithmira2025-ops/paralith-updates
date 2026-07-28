@@ -1,6 +1,7 @@
 name: Publish staged PARALITH update
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -163,7 +164,8 @@ jobs:
             for ($attempt = 1; $attempt -le 12 -and -not $verified; $attempt += 1) {
               try {
                 $response = Invoke-WebRequest -Uri $url -Method Head -MaximumRedirection 10
-                $verified = $response.StatusCode -eq 200 -and [long]$response.Headers.'Content-Length' -gt 0
+                $contentLength = @($response.Headers.'Content-Length') | Select-Object -First 1
+                $verified = $response.StatusCode -eq 200 -and $contentLength -and [long]$contentLength -gt 0
               } catch {
                 if ($attempt -eq 12) { throw }
                 Start-Sleep -Seconds 5
