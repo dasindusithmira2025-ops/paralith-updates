@@ -1,0 +1,11 @@
+{
+  "product": "PARALITH",
+  "edition": "preview",
+  "version": "0.4.2-1033",
+  "channel": "preview",
+  "commit": "3a86c8d808e2497433c672fc95d5aef1e16637df",
+  "buildTimestamp": "2026-07-29T07:01:35.4702279Z",
+  "schemaVersion": 26,
+  "target": "windows",
+  "architecture": "x86_64"
+}
