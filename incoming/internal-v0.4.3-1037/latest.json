@@ -1,0 +1,30 @@
+{
+  "version": "0.4.3-1037",
+  "notes": "Resume interrupted Claude Code and Codex terminals by their exact provider session ID\n\nRecover sessions in their original Project, repository, worktree, Workspace, and Pane context\n\nReview, relocate, dismiss, or resume multiple interrupted sessions from the Agent Resume Center\n\nPrevent duplicate resume launches with atomic claims and failed-pane rollback\n\nReject latest-session fallbacks, unsafe provider identifiers, mismatched repositories, and invalid executable or platform boundaries\n\nReconcile interrupted sessions after app restarts without copying prompts, transcripts, tokens, or environment snapshots",
+  "pub_date": "2026-07-30T15:23:45.1668254Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.3-1037/PARALITH.Preview_0.4.3-1037_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGUvc0lScGdEc0hYLzVvY2JvSk1FbWdvbDRySUZjNzJ3d1FqVzcyU3VBMUIxcjNKR2hseG9zTEtyOEtBalNZT2V2VUZ3WTNtUE83aitHSkcwMGFyYndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDI1MTg0CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMy0xMDM3X3g2NC1zZXR1cC5leGUKdGl5bUZ0aUZQQkJHRXorOU5CUzFpTW1ndit5b3Q5M1dNajRzN0JJM3F0UmdJWFc4N0ZLeXhEeUNXNUxKY2NMY2U0Wnl2eXhsTjJWVmYxM05ITVY3Q2c9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.3-1037/PARALITH.Preview_0.4.3-1037_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGUvc0lScGdEc0hYLzVvY2JvSk1FbWdvbDRySUZjNzJ3d1FqVzcyU3VBMUIxcjNKR2hseG9zTEtyOEtBalNZT2V2VUZ3WTNtUE83aitHSkcwMGFyYndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDI1MTg0CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMy0xMDM3X3g2NC1zZXR1cC5leGUKdGl5bUZ0aUZQQkJHRXorOU5CUzFpTW1ndit5b3Q5M1dNajRzN0JJM3F0UmdJWFc4N0ZLeXhEeUNXNUxKY2NMY2U0Wnl2eXhsTjJWVmYxM05ITVY3Q2c9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.3-1037/PARALITH.Preview_0.4.3-1037_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFU4NU10aUNSb0JrL21TNk1iUmlDMU5yOURCeTJ6WkFLZGp1ZjVaTG9KdDcxR2pGMGp1dlVsN0cyenBneUtjQnNRb0tYcWp2Vlg2TFovdVpjWU5GZWdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDI1MTg0CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMy0xMDM3X3g2NF9lbi1VUy5tc2kKaGNxZ0gxODVteXFuTWQ4WFM3bC9aTk01UzhaYnFBbFRaTk5yUisvNEtSTEtBVTcvN2VpTnVuNFh2ZVRvdUtFOXdveklpRlNKdkpSOE40K3RYYWU0REE9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "preview",
+    "channel": "preview",
+    "schemaVersion": 27,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 27,
+    "rolloutPercent": 100,
+    "commit": "a50b439cf88b90eb16875a43d346a7a395c2f298",
+    "buildTimestamp": "2026-07-30T15:23:45.1668254Z",
+    "previousInstallerUrl": null
+  }
+}
