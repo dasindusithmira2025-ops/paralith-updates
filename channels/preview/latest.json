@@ -1,30 +1,30 @@
 {
-  "version": "0.4.2-1035",
-  "notes": "Direct signed one-click updates with live download progress, safe-restart review, and actionable retry states\n\nPublic artifact-only update distribution with isolated Preview and Stable channel manifests\n\nProject-scoped Swarm role pools with mixed Claude, Codex, and automatic runtime allocations\n\nLive Claude and Codex usage limits in the desktop workspace\n\nA denser project-first sidebar and workspace information architecture\n\nExclude only the rebuildable WebView profile from live update backups while preserving authoritative application data\n\nCanonicalize public release asset names so signed installer URLs remain anonymously reachable\n\nNormalize the repository-scoped deploy key before public updater publication\n\nKeep agent terminal panes from inheriting colour-suppression settings\n\nSerialize Swarm lifecycle operations and preserve immutable launch-time team snapshots\n\nReject invalid runtime allocations and block launches when an explicitly selected runtime is unavailable",
-  "pub_date": "2026-07-29T10:03:19.4815047Z",
+  "version": "0.4.2-1036",
+  "notes": "Direct signed one-click updates with live download progress, safe-restart review, and actionable retry states\n\nPublic artifact-only update distribution with isolated Preview and Stable channel manifests\n\nProject-scoped Swarm role pools with mixed Claude, Codex, and automatic runtime allocations\n\nLive Claude and Codex usage limits in the desktop workspace\n\nExact-session recovery for interrupted Claude Code and Codex terminals\n\nA denser project-first sidebar and workspace information architecture\n\nExclude only the rebuildable WebView profile from live update backups while preserving authoritative application data\n\nCanonicalize public release asset names so signed installer URLs remain anonymously reachable\n\nNormalize the repository-scoped deploy key before public updater publication\n\nKeep agent terminal panes from inheriting colour-suppression settings\n\nSerialize Swarm lifecycle operations and preserve immutable launch-time team snapshots\n\nReject invalid runtime allocations and block launches when an explicitly selected runtime is unavailable",
+  "pub_date": "2026-07-30T14:15:55.7679046Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1035/PARALITH.Preview_0.4.2-1035_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFRuMHpGOUpJTkxFVEhjZTB0QkY4b3V5RlJrQ1NvTitla3QyQ0piSmpScXhCSUF6Qm10Y0tHK0pudGpaekx6S0w4UlAwNDcwMTNkMndLZEI3VHBYM1E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzE5NTQwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM1X3g2NC1zZXR1cC5leGUKb3JqcDVNcmRKcmY0S3hiQ0RTeWIzT0VmYWJCeEtBQWhNVmsvZzZlcFVRZ3VOYWc0eklycWZzaUxCMXlHdDdSbDJjai9Cazc4L1RQTjNoNnprMmlWREE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1036/PARALITH.Preview_0.4.2-1036_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFl2NTdMVkRuTWFpVDJGWThmWEptYmorTXZZZVpGdDIrYWxLS0Nod2NXVUU5ZUZMSjRjdUlLNUlBUkpCc1V2TnV5T2F1ZVJjVkpXNGRLY2Mxd1VFVGc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDIxMTE3CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM2X3g2NC1zZXR1cC5leGUKL3FPVFo4TVo1V1JpNnVoSmt4ZVFDQkxnNkRQc2ZQRzJ0S3ZQSTB4UkJwbDJnM3VETUp0VVdBUExJcUxxQTJkQktHQmUwL0s1RkRFM3JucTBMUWpyRFE9PQo="
     },
     "windows-x86_64-nsis": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1035/PARALITH.Preview_0.4.2-1035_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFRuMHpGOUpJTkxFVEhjZTB0QkY4b3V5RlJrQ1NvTitla3QyQ0piSmpScXhCSUF6Qm10Y0tHK0pudGpaekx6S0w4UlAwNDcwMTNkMndLZEI3VHBYM1E4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzE5NTQwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM1X3g2NC1zZXR1cC5leGUKb3JqcDVNcmRKcmY0S3hiQ0RTeWIzT0VmYWJCeEtBQWhNVmsvZzZlcFVRZ3VOYWc0eklycWZzaUxCMXlHdDdSbDJjai9Cazc4L1RQTjNoNnprMmlWREE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1036/PARALITH.Preview_0.4.2-1036_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFl2NTdMVkRuTWFpVDJGWThmWEptYmorTXZZZVpGdDIrYWxLS0Nod2NXVUU5ZUZMSjRjdUlLNUlBUkpCc1V2TnV5T2F1ZVJjVkpXNGRLY2Mxd1VFVGc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDIxMTE3CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM2X3g2NC1zZXR1cC5leGUKL3FPVFo4TVo1V1JpNnVoSmt4ZVFDQkxnNkRQc2ZQRzJ0S3ZQSTB4UkJwbDJnM3VETUp0VVdBUExJcUxxQTJkQktHQmUwL0s1RkRFM3JucTBMUWpyRFE9PQo="
     },
     "windows-x86_64-msi": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1035/PARALITH.Preview_0.4.2-1035_x64_en-US.msi",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGQ2WGZKdnNVOUFsZFY1VjJWYUhUMUVIMytZaFRGMklsQ1BFeUFnMS9ibGNSdTZRSDU4LzR4dWNmZTg4L2g2STBFQzhCTDl0OEt1WUtnWjdWbnErbXc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1MzE5NTQwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM1X3g2NF9lbi1VUy5tc2kKa1BBTm5XTXJuYWZxNi8vL0tTWk9KRkM3dk5GaVMyN1RxVkVsbHBFRWhvUVNTWk5IMzdZa3FGTlAyMEhNQXNwUENJNHRJZjhyRHZjNGxNQkdRdTQ0QVE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.2-1036/PARALITH.Preview_0.4.2-1036_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFhCaThUYTk0cjRuMXJ3OU0wSUNFUkQyUklBeTJOZlVGR3Zlc3pCTXM1NDFjaVRCVFl3YkpuMEc4b09KU2pmb2l6VmxFU200U0pFbFJsSklRZTNrMmc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NDIxMTE3CWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuMi0xMDM2X3g2NF9lbi1VUy5tc2kKM2ZzaVE1N0h6am9GZGZ0cGxKSmFVUVphSFRyYUJlRHhYck1lc3dXQkNvbFYrREVnMnYrWWNsY2swdUhZVEZ5ZUJLT3RSUXZPa1JHQXkxaS9CUmVoQ0E9PQo="
     }
   },
   "paralith": {
     "edition": "preview",
     "channel": "preview",
-    "schemaVersion": 26,
+    "schemaVersion": 27,
     "minSchemaVersion": 1,
-    "maxSchemaVersion": 26,
+    "maxSchemaVersion": 27,
     "rolloutPercent": 100,
-    "commit": "32619812bc91c3ac4f453df4bf46167f4e6b8b21",
-    "buildTimestamp": "2026-07-29T10:03:19.4815047Z",
+    "commit": "868e5ab40d8cfc7a18c723646cd3f7ca12fe47aa",
+    "buildTimestamp": "2026-07-30T14:15:55.7679046Z",
     "previousInstallerUrl": null
   }
 }
