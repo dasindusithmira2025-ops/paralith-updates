@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "repository": "dasindusithmira2025-ops/paralith-updates",
+  "tag": "internal-v0.4.4-1041",
+  "channel": "preview",
+  "version": "0.4.4-1041",
+  "title": "PARALITH Preview 0.4.4-1041",
+  "prerelease": true,
+  "manifestSha256": "8c89a7642f4ef1dcc7c9a524322b754bf384f113ddc89610f1b6e213a6467d78"
+}
