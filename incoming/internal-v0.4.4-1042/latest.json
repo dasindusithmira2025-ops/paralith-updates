@@ -1,0 +1,30 @@
+{
+  "version": "0.4.4-1042",
+  "notes": "Keep Browser workspaces responsive when switching tools or closing the Browser during native WebView startup\n\nReveal files and folders directly in Windows Explorer from the code-surface context menu\n\nSerialize native Browser creation, visibility, and teardown so a late WebView cannot cover terminals or capture workspace input\n\nHide or close cancelled Browser views after pending native creation completes\n\nSurface file-explorer reveal failures instead of silently discarding them",
+  "pub_date": "2026-07-31T18:26:39.6941795Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.4-1042/PARALITH.Preview_0.4.4-1042_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGZ5allQcWtObE9nT21oRmdpV3Y2dUdlOUVXQUtSNGRpTms4dG1UMmgyRFpLSTNvNnFsdGM1NC80L0owNzRzQThTVkY3YWloeTREeXZGRCsvaXo0S1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NTIyNTgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNC0xMDQyX3g2NC1zZXR1cC5leGUKTGhHUGttU2R2MW1YRmNJckVMYXJRTHVNcmVKdzh0ZmhydDhuY3RXSHpiZzZpYlNXang1amFlV01pRmI3QTArM0l6Njc0SXVkTklMbXlrdUs0NDZVQUE9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.4-1042/PARALITH.Preview_0.4.4-1042_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGZ5allQcWtObE9nT21oRmdpV3Y2dUdlOUVXQUtSNGRpTms4dG1UMmgyRFpLSTNvNnFsdGM1NC80L0owNzRzQThTVkY3YWloeTREeXZGRCsvaXo0S1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NTIyNTgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNC0xMDQyX3g2NC1zZXR1cC5leGUKTGhHUGttU2R2MW1YRmNJckVMYXJRTHVNcmVKdzh0ZmhydDhuY3RXSHpiZzZpYlNXang1amFlV01pRmI3QTArM0l6Njc0SXVkTklMbXlrdUs0NDZVQUE9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.4-1042/PARALITH.Preview_0.4.4-1042_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGFVQnVyTHFEL0pBNmxMQmFmYXJDRXk4Ti90M1dCSGdibHh0L0I0ZnFER0t0K2JBQkFSTjR4VFNhYkFHcWthTGdOSGZ2T2lTVEk1dDJkTnhPeU5qVGdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NTIyNTgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNC0xMDQyX3g2NF9lbi1VUy5tc2kKTFp5OUJHN3g1Q3dxTHc1WTV4NFQ5Z2ZLTTlCaytlS2NVaFRWMnpVMHg0cytDQmhBUnRhM2JsRzJybHp4cTdnOGZuZ0JpUFAxc0xrcWVQZDZIeXEwRFE9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "preview",
+    "channel": "preview",
+    "schemaVersion": 27,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 27,
+    "rolloutPercent": 100,
+    "commit": "3a8518f217c4bf1adc28b07ab4ac63eb7e1ce6e5",
+    "buildTimestamp": "2026-07-31T18:26:39.6941795Z",
+    "previousInstallerUrl": null
+  }
+}
