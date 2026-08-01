@@ -1,0 +1,30 @@
+{
+  "version": "0.4.5",
+  "notes": "Bound automatic terminal restoration across all open Workspaces with one application-wide launch budget\n\nPublish updater assets through the protected public update repository and configured push mirror\n\nPrevent each Workspace from independently consuming the full restoration budget during startup\n\nSerialize concurrent Workspace restores so each restore observes the current live-session count\n\nKeep over-budget Panes visible as deferred instead of launching an unbounded terminal and agent burst\n\nValidate protected annotated release tags against their target commit instead of the tag-object identifier",
+  "pub_date": "2026-08-01T19:12:04.3221288Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.5/PARALITH_0.4.5_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU25ta2d0SWk3cGdlcVRWSHlZMFNxZzFEeUNlMEtwSml1UW9aNUp3My8yYlZ3Zk4veEJBc3B3L3EyenBCTWxnQ1BJeDF2T1Z1MGpKRHcwMGNrRURqdWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjExNjkzCWZpbGU6UEFSQUxJVEhfMC40LjVfeDY0LXNldHVwLmV4ZQowOHNNNnpmcW5VZEc1MndCbWRNUURCeEhoNjRMQm1YT3hSUmtVUyt3aGNEam92clp4VFdDS1U3ekpyY1kzK3dzdjhRWjdXbU11NmtFbUdDdGllblBDZz09Cg=="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.5/PARALITH_0.4.5_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU25ta2d0SWk3cGdlcVRWSHlZMFNxZzFEeUNlMEtwSml1UW9aNUp3My8yYlZ3Zk4veEJBc3B3L3EyenBCTWxnQ1BJeDF2T1Z1MGpKRHcwMGNrRURqdWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjExNjkzCWZpbGU6UEFSQUxJVEhfMC40LjVfeDY0LXNldHVwLmV4ZQowOHNNNnpmcW5VZEc1MndCbWRNUURCeEhoNjRMQm1YT3hSUmtVUyt3aGNEam92clp4VFdDS1U3ekpyY1kzK3dzdjhRWjdXbU11NmtFbUdDdGllblBDZz09Cg=="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.5/PARALITH_0.4.5_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3F2a1dXQ3dJSWNUd0h6b3RqYmxGMVVKVWIycDYrN2h4L2JyQ3pTZWJpMzdzTzRJTEw1U3dhV0Q2ZExUUnBaLzhKN1pFeGNpcmtXSU1zMUx5dlVISHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjExNjkzCWZpbGU6UEFSQUxJVEhfMC40LjVfeDY0X2VuLVVTLm1zaQo4MDVHMndCRWdxVWpWODhMcUxWZW5DdXBUYkVZcFB1amlya2EydmNRLytpdDFXcmEwNnErU0JIMTdLampVOUl0N1IrTm1lYkJOZEQzSUY4Ny83c0lEdz09Cg=="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 27,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 27,
+    "rolloutPercent": 100,
+    "commit": "ec1cd2fe114c0b5986a3c79d93e61218d3248605",
+    "buildTimestamp": "2026-08-01T19:12:04.3221288Z",
+    "previousInstallerUrl": null
+  }
+}
