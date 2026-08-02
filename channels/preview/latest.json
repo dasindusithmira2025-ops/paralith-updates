@@ -1,19 +1,19 @@
 {
-  "version": "0.4.6-1047",
-  "notes": "Bound automatic terminal restoration across all open Workspaces with one application-wide launch budget\n\nPublish updater assets through the protected public update repository and configured push mirror\n\nPrevent each Workspace from independently consuming the full restoration budget during startup\n\nSerialize concurrent Workspace restores so each restore observes the current live-session count\n\nKeep over-budget Panes visible as deferred instead of launching an unbounded terminal and agent burst\n\nValidate protected annotated release tags against their target commit instead of the tag-object identifier",
-  "pub_date": "2026-08-02T03:30:48.1434601Z",
+  "version": "0.4.7-1048",
+  "notes": "Keep automatic terminal and agent restoration inside the configured application-wide startup budget\n\nStop workspace hydration state changes from automatically launching budget-deferred Panes\n\nResume a deferred Pane only after a real user focus or Resume action\n\nSerialize renderer resume attempts so one interaction cannot race into multiple launches\n\nPrevent the Resume button from also triggering the Pane focus launch path",
+  "pub_date": "2026-08-02T04:03:33.3467686Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.6-1047/PARALITH.Preview_0.4.6-1047_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFRXZEptZVNkTFh3WjdJT25qU2ZNZXpGWnc2dXBRcW9CSVJVZ1NYWUhvMThBaW5UdHBKK1dYMWVHNUt5eUtFdEQ3bDlHdm1tNWsrTzI3eUsybmxmVndBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQxNjgwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNi0xMDQ3X3g2NC1zZXR1cC5leGUKbU1DZ25iMnJLN21DS1A1SkZoYU9LVittUE5UbXcrcFpteU1FTm95OENpOUc2ZitpQThHNjVNWnA5VXBpbk5DU01OZFVETlEzeVArUHFLN2s1bnY2QVE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.7-1048/PARALITH.Preview_0.4.7-1048_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFVkemxNWDJjVU9ZbmRtU3ZjclIrcXpyVmFuREtVZEpqR1pGU2xyalMxcG5KbGdGUmJCSHZGU3lwR1UvMy9CMkpTbjZpU0kzVXJaNUtxVGJPb1poUHdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQzNjgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNy0xMDQ4X3g2NC1zZXR1cC5leGUKTmZQaG5RSkxJZCtBT0h1ZXNGcnZxSXRuWUdLaDRvR0tsKytCNTVwWHkva2N0SVRsRmZVUTUvMmFQc2F0ajEvWHhpN0pCR1ozQ0lMeVNpNXB2Tnh6Qnc9PQo="
     },
     "windows-x86_64-nsis": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.6-1047/PARALITH.Preview_0.4.6-1047_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFRXZEptZVNkTFh3WjdJT25qU2ZNZXpGWnc2dXBRcW9CSVJVZ1NYWUhvMThBaW5UdHBKK1dYMWVHNUt5eUtFdEQ3bDlHdm1tNWsrTzI3eUsybmxmVndBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQxNjgwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNi0xMDQ3X3g2NC1zZXR1cC5leGUKbU1DZ25iMnJLN21DS1A1SkZoYU9LVittUE5UbXcrcFpteU1FTm95OENpOUc2ZitpQThHNjVNWnA5VXBpbk5DU01OZFVETlEzeVArUHFLN2s1bnY2QVE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.7-1048/PARALITH.Preview_0.4.7-1048_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFVkemxNWDJjVU9ZbmRtU3ZjclIrcXpyVmFuREtVZEpqR1pGU2xyalMxcG5KbGdGUmJCSHZGU3lwR1UvMy9CMkpTbjZpU0kzVXJaNUtxVGJPb1poUHdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQzNjgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNy0xMDQ4X3g2NC1zZXR1cC5leGUKTmZQaG5RSkxJZCtBT0h1ZXNGcnZxSXRuWUdLaDRvR0tsKytCNTVwWHkva2N0SVRsRmZVUTUvMmFQc2F0ajEvWHhpN0pCR1ozQ0lMeVNpNXB2Tnh6Qnc9PQo="
     },
     "windows-x86_64-msi": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.6-1047/PARALITH.Preview_0.4.6-1047_x64_en-US.msi",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNFVBUWZ6K3hpclZQMGRYVGJmdXcwR3hDemFQR2J6bTNDRUNTcExrU2NEczJxZlJoSjh3NXF6REdGd1l5WXFOMjZFaUZpVTI3ZEgrS1AwZHZGc3FHaGc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQxNjgwCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNi0xMDQ3X3g2NF9lbi1VUy5tc2kKQlZHdVRON2lPOVVHMWkvVkppbWU2ZndML0JyaTRSQjhUNUE1aHdadnIxaSsxZ1hyVXoxc0lZdjJQSDJJTTZzYk5KaStBeVBrcnlVbm5ZOHJFcTM2REE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/internal-v0.4.7-1048/PARALITH.Preview_0.4.7-1048_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUcHlNaWdYZ2JCNGJGckV6bkQvR3ZvWHhKSytRZlRMaWZOTmwxS3NZYXpSS3dXSitpNnFtN25zbElYZEU5UDZGZ3NSOW9pbGhLaUJtTnRWcmloWTZvVCt4VFFZMXdBYndVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg1NjQzNjgyCWZpbGU6UEFSQUxJVEggUHJldmlld18wLjQuNy0xMDQ4X3g2NF9lbi1VUy5tc2kKU0xhZHdoaTVEUGN0TWZaM2tOZjZTbVY5TVdiNnJRcExCVnVwNzJTVVZWd3BldkVPY2xTTmhwMk5IMExzZXJzNDNUeEJtcFErUUdrZmVaL3dEdDRPREE9PQo="
     }
   },
   "paralith": {
@@ -23,8 +23,8 @@
     "minSchemaVersion": 1,
     "maxSchemaVersion": 27,
     "rolloutPercent": 100,
-    "commit": "95e4445a825f19dc02b619434765f2b249e183de",
-    "buildTimestamp": "2026-08-02T03:30:48.1434601Z",
+    "commit": "de5a5dfcf95a0170f34f94c6ac0a4b2eecafba01",
+    "buildTimestamp": "2026-08-02T04:03:33.3467686Z",
     "previousInstallerUrl": null
   }
 }
