@@ -1,0 +1,30 @@
+{
+  "version": "0.4.8",
+  "notes": "Browse a repository's commit history inside the Repository Command Center without leaving PARALITH\n\nOpen any commit to read its metadata and the files it changed\n\nRead history for a selected worktree, not only the primary checkout\n\nShow live terminal and agent state for every open Project in the sidebar, not only the Project currently on screen\n\nSurface Workspaces whose agents are waiting on a person, and rank them first under the Needs you order\n\nList only the Projects being worked in, so a Project opened once months ago no longer occupies the sidebar\n\nPersist sidebar grouping, order, and collapsed sections in application settings so every window agrees\n\nList commits touching paths that contain spaces, quotes, or newlines instead of truncating them\n\nReport a renamed file with both its old and new path rather than an empty entry\n\nShow binary files as binary instead of reporting a line count they do not have\n\nStop a background Project's row reporting terminals as running after they have exited\n\nReport Workspaces blocked on input or a permission prompt as waiting instead of active\n\nMark terminal sessions that ended while the application was not listening as exited rather than leaving them running\n\nClear a Workspace's agent state when its terminals are stopped, so it cannot keep requesting attention\n\nHold the sidebar order steady while a row is dragged or its menu is open",
+  "pub_date": "2026-08-10T06:23:34.8223438Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.8/PARALITH_0.4.8_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3B1WWR4NVhSR2dsU3QrVElySC9lVWcrUUw5dEd4akZHaVJRSHJtSnpIb0JHbHdNZlhaYnZaT1RmdEt3ck1tTmhOaWk5UU5tazZiZlVPSVZzMlo5c0FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzQzNTgzCWZpbGU6UEFSQUxJVEhfMC40LjhfeDY0LXNldHVwLmV4ZQo5aDlFOFFiUmV3WWlTVWxqTUJlUXJWbHZJK0x4WmlaTHZYY1hwMTNmMlR0Ulc4Z0M3cnhsN3JGU0lwV0RLNHEzRHR6QlF4T013YnBJSVVzY0ZXdUxEdz09Cg=="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.8/PARALITH_0.4.8_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3B1WWR4NVhSR2dsU3QrVElySC9lVWcrUUw5dEd4akZHaVJRSHJtSnpIb0JHbHdNZlhaYnZaT1RmdEt3ck1tTmhOaWk5UU5tazZiZlVPSVZzMlo5c0FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzQzNTgzCWZpbGU6UEFSQUxJVEhfMC40LjhfeDY0LXNldHVwLmV4ZQo5aDlFOFFiUmV3WWlTVWxqTUJlUXJWbHZJK0x4WmlaTHZYY1hwMTNmMlR0Ulc4Z0M3cnhsN3JGU0lwV0RLNHEzRHR6QlF4T013YnBJSVVzY0ZXdUxEdz09Cg=="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.8/PARALITH_0.4.8_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU2gxSHNLMXI4ai83UGExclN6NjV3Y2FVaVE5SndONjI5TDBqRThHNDJZbW95cElrRGwxL1k4cVFORjhOd2pEZmNYMFdhNUxUdFRFU0NYRzlCMmpIMUFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzQzNTgzCWZpbGU6UEFSQUxJVEhfMC40LjhfeDY0X2VuLVVTLm1zaQpiTlF1TzA5UlFLT2hBOENxdmFEVmpXNTFGTGhxWTIvNnNFbTZnN1Y5dkJlZWlpYjBYK3JMVzU3TmtMb0h2RG83Yyt0VTdiaFJ3TllSalBYMjNkZWZBdz09Cg=="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 27,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 27,
+    "rolloutPercent": 100,
+    "commit": "7374a1e13a3e4ad0ec2144ed8960d684c9a6885b",
+    "buildTimestamp": "2026-08-10T06:23:34.8223438Z",
+    "previousInstallerUrl": null
+  }
+}
