@@ -1,0 +1,36 @@
+# PARALITH Stable 0.4.12
+
+Channel: stable
+Date: 2026-08-13
+Git commit: 159e4351bb6b178182b6855b0b4bb890d00ab241
+Database schema: 29
+
+## Highlights
+- Database Studio: discovered sources are now classified by how closely they resemble the application's own database, so a repository's test fixtures stop being presented as first-class production datasources
+- Database Studio: failures now surface the backend's actual cause alongside its message instead of a generic "could not access its local database", and a layer with nothing behind it yet is now distinguished from a genuinely empty schema
+- Database Studio: foreign-key relationships display One → One vs Many → One cardinality, derived only from constraint evidence (never guessed from naming)
+
+## Fixes
+- None
+
+## Database changes
+- Schema v29 adds database_sources.relevance; existing rows default to 'application' so nothing already surfaced disappears on upgrade
+
+## Known issues
+- Database Studio: Drizzle change generation is not implemented; a Drizzle-only source refuses implementation with a clear error rather than writing something wrong
+- Database Studio: PostgreSQL/MySQL network introspection and any credential store remain absent by design
+- A Windows protected-process, driver, or component-store fault can force a restart independently of PARALITH and cannot be repaired from within the application
+- Windows component-store and protected-file verification require an elevated Administrator console
+- Open in default app remains restricted by the opener path policy; Reveal in file explorer is available
+- GitHub App installation-token exchange and public webhook ingress require the separately deployed Corelith backend service
+- Remote repository synchronization remains explicit-refresh only
+- Commit history is read on demand for the selected repository or worktree; it does not refresh automatically as new commits land
+
+## Required manual actions
+- Use the in-app Stable update button and approve the safe restart; no manual installer download is required
+
+## SHA-256
+- `f7464afebed0bb1a381fdc4cad27a1782c7f09ee9b2782c16332cbd3e9a0d05d  PARALITH_0.4.12_x64_en-US.msi`
+- `e2fbc879792777be410ddad373c370c0636bebfc2ccef882f18c4907bbfbf2ee  PARALITH_0.4.12_x64_en-US.msi.sig`
+- `c5529f33850b8e9a5826e03acf977c91c454d4e51c4c797ede544588ceb5502f  PARALITH_0.4.12_x64-setup.exe`
+- `0594ae2329be04eebf17f58d3277bd55fba4d6766a000fa8a85aa1a459a9119d  PARALITH_0.4.12_x64-setup.exe.sig`

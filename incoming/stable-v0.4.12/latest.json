@@ -1,0 +1,30 @@
+{
+  "version": "0.4.12",
+  "notes": "Database Studio: discovered sources are now classified by how closely they resemble the application's own database, so a repository's test fixtures stop being presented as first-class production datasources\n\nDatabase Studio: failures now surface the backend's actual cause alongside its message instead of a generic \"could not access its local database\", and a layer with nothing behind it yet is now distinguished from a genuinely empty schema\n\nDatabase Studio: foreign-key relationships display One → One vs Many → One cardinality, derived only from constraint evidence (never guessed from naming)",
+  "pub_date": "2026-08-12T20:10:19.1301347Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.12/PARALITH_0.4.12_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3BSZk5Ka1pvV1c1VngzUTloWW1vMStyRkgxZzJZdFV2NjQyVnhYVjdQU2FLQWVqd2hWMnJ2dk5xV20yMlFqTEtnckxBMlJiSVdGb0xhNEdyQUF1TEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTY2MDA2CWZpbGU6UEFSQUxJVEhfMC40LjEyX3g2NC1zZXR1cC5leGUKbXpPaWtnYm9jTDhTcW9uOFp4eWdOWUVtbkUzM0psdTNSVjNVM3pHbFJuQW03dHFUMUNrYjFUcGF6TkNsTEk5OWZWRUxiNjExajE3cXBJZ1V4UFdtRFE9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.12/PARALITH_0.4.12_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3BSZk5Ka1pvV1c1VngzUTloWW1vMStyRkgxZzJZdFV2NjQyVnhYVjdQU2FLQWVqd2hWMnJ2dk5xV20yMlFqTEtnckxBMlJiSVdGb0xhNEdyQUF1TEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTY2MDA2CWZpbGU6UEFSQUxJVEhfMC40LjEyX3g2NC1zZXR1cC5leGUKbXpPaWtnYm9jTDhTcW9uOFp4eWdOWUVtbkUzM0psdTNSVjNVM3pHbFJuQW03dHFUMUNrYjFUcGF6TkNsTEk5OWZWRUxiNjExajE3cXBJZ1V4UFdtRFE9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.12/PARALITH_0.4.12_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU2hlN1FFZkNHMjJRZkRNRk8vMHpYY0drWk1EMy9RUlFMUjAvZVh2NEY4Z0Z2RCsvNHVTV3ZVNE1FT1YralU2ZXhIMW1SSytiOFk2b0UrakRVVE9EblFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTY2MDA2CWZpbGU6UEFSQUxJVEhfMC40LjEyX3g2NF9lbi1VUy5tc2kKL3A0bnNVeXVScHdrcUxVWmVzTElJVXRBRXJyR2MzK0RPaDc2eFBLbXlobXhzQzBLWE94ZlcvdHU1ZXR3R3dISGZFSzVVUXViMzJFT28yNlp6OGVGQlE9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 29,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 29,
+    "rolloutPercent": 100,
+    "commit": "159e4351bb6b178182b6855b0b4bb890d00ab241",
+    "buildTimestamp": "2026-08-12T20:10:19.1301347Z",
+    "previousInstallerUrl": null
+  }
+}
