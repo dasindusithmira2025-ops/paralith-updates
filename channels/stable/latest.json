@@ -1,19 +1,19 @@
 {
-  "version": "0.4.10",
-  "notes": "Database Studio: redesigned schema diagram with bounded, readable table cards and real relationship-aware layout\n\nDatabase Studio diagram: table cards no longer grow taller than the space the layout engine reserves for them, which previously let wide tables visually overlap the node laid out below them\n\nDatabase Studio diagram: relationship lines at far/grouped zoom now connect to the visible domain boxes instead of dangling at hidden table positions",
-  "pub_date": "2026-08-12T04:12:58.5535415Z",
+  "version": "0.4.11",
+  "notes": "Design system revamp: a canonical design system (design.md) now governs surfaces, borders, typography, geometry, and button hierarchy across the whole application\n\nReworked color, border, and typography tokens for a five-step hairline border ladder, a four-level text contrast hierarchy, and named semantic state colors (info/success/warning/danger/agent/ready/neutral)\n\nButtons: only one accent-filled action per screen now — repeated per-row/per-record actions (Workspace launcher, Agent Resume) switched from primary to secondary so the dominant action stays legible\n\nDatabase Studio: fixed a real repository scan on a multi-package project sometimes failing with \"PARALITH could not access its local database\" — several identifier collisions (shared schema files, packages sharing a datasource name, repeated health issues) could abort the discovery transaction",
+  "pub_date": "2026-08-12T06:55:56.7728056Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.10/PARALITH_0.4.10_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3JDaVpXN0ZsNlhNTjh0Z1lSd00rQWgwTFBiTFB5bFlldEMzSG1TR05IWEhycjlCV1FJWGxTcmZ2YkFCOGh3YkNiaFBzUnFZa0RYK00zdEZuTTV3YlFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTA4NjE4CWZpbGU6UEFSQUxJVEhfMC40LjEwX3g2NC1zZXR1cC5leGUKaHdIK0JjbjNwMHo5em1Zdm13WE15VHh2QWJqdVdTczJRQlg1Ky9aNElmTEt2OU1ITFZ5WVRJcVpqajVoUGtwR0dGYjV6bm5wc1pvK0Z6anJMeFo3QWc9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.11/PARALITH_0.4.11_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3ZYQlBpMjlVMjRRcGVZRjIxL256aS80YUN2L0NTR2E2M3BhRnZmeVlWaU5HcThHY2cwSTYvd3QrSHpCVithaHhOMXBIbU1qV3lHVUNKbnJqYllUekF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTE4Mzc5CWZpbGU6UEFSQUxJVEhfMC40LjExX3g2NC1zZXR1cC5leGUKend0bUJ5bjE1a2VNc1R2TlVKV0d1V2Vtb0UxNjRFTHNsNDlwKytTNDlPMUhpbW5jL2oraWZsQldxM2k1V0RFclpTbkVxUzJJejA2Ylh3Rm5JVGxBRHc9PQo="
     },
     "windows-x86_64-nsis": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.10/PARALITH_0.4.10_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3JDaVpXN0ZsNlhNTjh0Z1lSd00rQWgwTFBiTFB5bFlldEMzSG1TR05IWEhycjlCV1FJWGxTcmZ2YkFCOGh3YkNiaFBzUnFZa0RYK00zdEZuTTV3YlFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTA4NjE4CWZpbGU6UEFSQUxJVEhfMC40LjEwX3g2NC1zZXR1cC5leGUKaHdIK0JjbjNwMHo5em1Zdm13WE15VHh2QWJqdVdTczJRQlg1Ky9aNElmTEt2OU1ITFZ5WVRJcVpqajVoUGtwR0dGYjV6bm5wc1pvK0Z6anJMeFo3QWc9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.11/PARALITH_0.4.11_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3ZYQlBpMjlVMjRRcGVZRjIxL256aS80YUN2L0NTR2E2M3BhRnZmeVlWaU5HcThHY2cwSTYvd3QrSHpCVithaHhOMXBIbU1qV3lHVUNKbnJqYllUekF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTE4Mzc5CWZpbGU6UEFSQUxJVEhfMC40LjExX3g2NC1zZXR1cC5leGUKend0bUJ5bjE1a2VNc1R2TlVKV0d1V2Vtb0UxNjRFTHNsNDlwKytTNDlPMUhpbW5jL2oraWZsQldxM2k1V0RFclpTbkVxUzJJejA2Ylh3Rm5JVGxBRHc9PQo="
     },
     "windows-x86_64-msi": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.10/PARALITH_0.4.10_x64_en-US.msi",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3VOclBMVmF6a2lvQi9yT1p0eVk5OTFzbHhxSkxxeXRXUkJZS01MTy8yNlduK245UllOZS9wMGlXckVjOFVGTW5vK281Z1pzWnJCM2xCUFVDUHorVndVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTA4NjE4CWZpbGU6UEFSQUxJVEhfMC40LjEwX3g2NF9lbi1VUy5tc2kKYmhxaEpXQ1hpRWNwQVdLWG9CLzJBMnV2azhjZ2lnaDZaSnVKVTBQZHRrdWpMeWRlUFdZTitrb3d2NHlIMjUzMFd1K0RMYWRFS3pOZi95ZFpTVEJqQ0E9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.11/PARALITH_0.4.11_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU2tLeVZTWlFFTFljcG1ZOGdBdWJmQnJqbTBTWmZvbVhsOGJETlg1M0pNZnh4eEh1cTRUUkhPUkpkTjhheFlZeGFNVVoyUDVWSDRYWXNxdU1CZEFxNUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTE4Mzc4CWZpbGU6UEFSQUxJVEhfMC40LjExX3g2NF9lbi1VUy5tc2kKd2xVWVdnZ2xYRmx3NVNPQUN3dkRGYTBEK1g1T3NLMzMxT2dWd1NwNWEzZE5oVExmUkZaWWQ0TDZhMlYrZ1ZoalE4enIxK21ta1h0bzZ6L0RwaktHQlE9PQo="
     }
   },
   "paralith": {
@@ -23,8 +23,8 @@
     "minSchemaVersion": 1,
     "maxSchemaVersion": 28,
     "rolloutPercent": 100,
-    "commit": "3049123eaa9a7723327271666c30c80b7aecde3b",
-    "buildTimestamp": "2026-08-12T04:12:58.5535415Z",
+    "commit": "b7916b5b46d6ace4d57a636adbf5701929c3c730",
+    "buildTimestamp": "2026-08-12T06:55:56.7728056Z",
     "previousInstallerUrl": null
   }
 }
