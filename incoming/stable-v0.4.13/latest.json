@@ -1,0 +1,30 @@
+{
+  "version": "0.4.13",
+  "notes": "Usage analytics: PARALITH now persists daily AI token history by provider and model, with local 7/30/90-day views, provider/model/day breakdowns, cache-read savings, and partial-cost labeling when a model has no known list price\n\nWorkspace surface: the workspace tool panel now uses explicit surface tabs and empty states so Browser, Usage, and other tools have clear ownership instead of competing panel state\n\nSidebar: the workspace sidebar has been reorganized into a focused header, workspace section, scroll body, and status area, with update actions available from the persistent status region\n\nCodex usage parsing now reads token counters from the CLI's info envelope and carries the serving model across transcript events, so Codex history is no longer silently recorded as zero or model-less\n\nCodex cached input is normalized before aggregation so cached tokens are not counted twice as uncached input\n\nThe update notification and sidebar update action now share the same actionable-phase logic and restart confirmation copy",
+  "pub_date": "2026-08-13T08:04:08.3182708Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.13/PARALITH_0.4.13_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3JINWJMVVRadS92emlZdUhIRnlnVStqZmpiZlZCQUVUaWpPNXJHc0J1MWs3V3hhVVFXck83QkdQWmhFWVVjdGJtZjVHVXlHRjg2S1JpUEFOSkZtdncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NjA4ODg4CWZpbGU6UEFSQUxJVEhfMC40LjEzX3g2NC1zZXR1cC5leGUKT0Y2Z1pFWjhydENrZTRycDBRYURzanBML2ZNSllYYkM3aVExMXpQd0toTDFkL29zcnBodkNQbGJPMkh5ZGt2TE9KWGdzb2NUQWd3Z2RHRis3TGd1Q0E9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.13/PARALITH_0.4.13_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3JINWJMVVRadS92emlZdUhIRnlnVStqZmpiZlZCQUVUaWpPNXJHc0J1MWs3V3hhVVFXck83QkdQWmhFWVVjdGJtZjVHVXlHRjg2S1JpUEFOSkZtdncwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NjA4ODg4CWZpbGU6UEFSQUxJVEhfMC40LjEzX3g2NC1zZXR1cC5leGUKT0Y2Z1pFWjhydENrZTRycDBRYURzanBML2ZNSllYYkM3aVExMXpQd0toTDFkL29zcnBodkNQbGJPMkh5ZGt2TE9KWGdzb2NUQWd3Z2RHRis3TGd1Q0E9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.13/PARALITH_0.4.13_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU2pHUThyRHo0WmNtSHRHVkd2aXliV3Z2UklMb1lCTDJIWGt2UCttS3hWOTkvRDBTY29UZVhDTldzRmVwRWRHVThwZXNVOHBadmw3L0R0eXUwcWNBOWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NjA4ODg4CWZpbGU6UEFSQUxJVEhfMC40LjEzX3g2NF9lbi1VUy5tc2kKOUtHK205N3JCR1MzM0FIQXFrNVdsd3dNUzVoYW1rSDVjc01xWFVuTklHdlE1MUdENzhPQ3JSVVdoMERNOUxMSkRTMytBY0Q0ci9zdUQ2QW1NT2VwQWc9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 30,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 30,
+    "rolloutPercent": 100,
+    "commit": "9b5215def1a448ffe279c58ae6796e13245b5ef8",
+    "buildTimestamp": "2026-08-13T08:04:08.3182708Z",
+    "previousInstallerUrl": null
+  }
+}
