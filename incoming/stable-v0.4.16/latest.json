@@ -1,0 +1,30 @@
+{
+  "version": "0.4.16",
+  "notes": "Memory now follows project file changes from the Project session lifecycle instead of depending on Code Surface being open\n\nChanged source evidence can now supersede obsolete Memory and create current replacement knowledge with provenance\n\nRun Engine and Mission Control remain included with durable Project-scoped execution and orchestration surfaces\n\nSource Control remains focused on workspace worktrees while preserving queued repository operations\n\nStale or superseded Memory is no longer injected as normal current project truth during context compilation\n\nContext cache entries are invalidated when Memory is learned, superseded, marked stale, or candidate processing affects project truth\n\nLiteral/config source changes can update Memory deterministically without calling Claude or Codex\n\nAmbiguous source changes are routed to existing Memory review candidates instead of being silently promoted",
+  "pub_date": "2026-08-25T17:58:37.8574944Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29oUEtnUDJvYXlhWWcxRHhvNDhIRjZKZGRwd0MxUklRbCtzOFpCSUNHR25Zc3Rod2VsSkxsTXFXQ3RUdGtiVldUVUp4N2pvcjl6SThwTWZaRTFhYlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NC1zZXR1cC5leGUKQUM5c29yZk11L3RMck04TGJWeEQ2MFNZWEpOMjAzTFZaTk1uSk44Rnp4MzR1aTIzdHpyN2krdnlzRW9ZaUhmOEsyWWJlY3pBTzkrZ1owUWtxSzNVQ3c9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29oUEtnUDJvYXlhWWcxRHhvNDhIRjZKZGRwd0MxUklRbCtzOFpCSUNHR25Zc3Rod2VsSkxsTXFXQ3RUdGtiVldUVUp4N2pvcjl6SThwTWZaRTFhYlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NC1zZXR1cC5leGUKQUM5c29yZk11L3RMck04TGJWeEQ2MFNZWEpOMjAzTFZaTk1uSk44Rnp4MzR1aTIzdHpyN2krdnlzRW9ZaUhmOEsyWWJlY3pBTzkrZ1owUWtxSzNVQ3c9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29TamZZcEdlNW1tMU5wYXNDd0F3UHQ1L3hhZkRDWHJKZUdGN25sS21xOGRYM2V6M2ZMU2w0SXhYYVBQU0ljdzZpb2dadG44czc0NDhUbU9rS21DeUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NF9lbi1VUy5tc2kKV1NwMlpVL2MyWGhPbmVKaGtBY3VPS0xqUVhsZFZFbzlJb1NJb2Jweno3cWRqVlpSWkJYcnNrMVFOVVVLbUM5UTVnbFIrKzYzTDVRZ0lCZHo4djUvQVE9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 39,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 39,
+    "rolloutPercent": 100,
+    "commit": "f13704ae7979d96ea05abbbf113b5f025ad57abc",
+    "buildTimestamp": "2026-08-25T17:58:37.8574944Z",
+    "previousInstallerUrl": null
+  }
+}

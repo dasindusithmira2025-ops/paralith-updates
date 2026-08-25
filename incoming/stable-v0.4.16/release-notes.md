@@ -1,0 +1,48 @@
+# PARALITH Stable 0.4.16
+
+Channel: stable
+Date: 2026-08-25
+Git commit: f13704ae7979d96ea05abbbf113b5f025ad57abc
+Database schema: 39
+
+## Highlights
+- Memory now follows project file changes from the Project session lifecycle instead of depending on Code Surface being open
+- Changed source evidence can now supersede obsolete Memory and create current replacement knowledge with provenance
+- Run Engine and Mission Control remain included with durable Project-scoped execution and orchestration surfaces
+- Source Control remains focused on workspace worktrees while preserving queued repository operations
+
+## Fixes
+- Stale or superseded Memory is no longer injected as normal current project truth during context compilation
+- Context cache entries are invalidated when Memory is learned, superseded, marked stale, or candidate processing affects project truth
+- Literal/config source changes can update Memory deterministically without calling Claude or Codex
+- Ambiguous source changes are routed to existing Memory review candidates instead of being silently promoted
+
+## Database changes
+- Schema v37 refreshes built-in Swarm presets so concrete agent allocations carry canonical provider and model identities
+- Schema v38 adds the canonical Runs, Run events, and Run approvals tables for durable agent execution history
+- Schema v39 installs Mission Control tables, correlates Runs with Missions and Mission Tasks, and keeps Run history when a Mission is deleted
+- Schema v39 retires the abandoned v7 Mission table cluster; non-empty legacy rows are preserved under _legacy_v7 table names instead of being dropped
+- User-created Swarm presets, Projects, Workspaces, terminals, Missions, Memory rows, Database Studio data, Usage history, settings, and Stable updater state are preserved through forward migrations
+
+## Known issues
+- The Vault Markdown directory is a generated review surface; the runtime SQLite database remains the canonical source for in-app memory and evidence
+- Editing generated Vault notes outside PARALITH does not yet import changes back into the runtime database
+- Deep cross-file architectural inference and broad language-specific rename analysis remain intentionally conservative; ambiguous changes enter Memory review
+- Usage cost is an equivalent API list-price estimate, not a provider subscription bill; models without a known rate keep their tokens visible and make the total partial
+- Database Studio: Drizzle change generation is not implemented; a Drizzle-only source refuses implementation with a clear error rather than writing something wrong
+- Database Studio: PostgreSQL/MySQL network introspection and any credential store remain absent by design
+- A Windows protected-process, driver, or component-store fault can force a restart independently of PARALITH and cannot be repaired from within the application
+- Windows component-store and protected-file verification require an elevated Administrator console
+- Open in default app remains restricted by the opener path policy; Reveal in file explorer is available
+- GitHub App installation-token exchange and public webhook ingress require the separately deployed Corelith backend service
+- Remote repository synchronization remains explicit-refresh only
+- Commit history is read on demand for the selected repository or worktree; it does not refresh automatically as new commits land
+
+## Required manual actions
+- Use the in-app Stable update button and approve the safe restart; no manual installer download is required
+
+## SHA-256
+- `957ffaa29a6dcc381b5b7cf43c8916b0c400302f01d08da640a6dcffcf459149  PARALITH_0.4.16_x64_en-US.msi`
+- `11340408d2657115c873038f2a56fdd7b8b55fc7a584901113d0a8e8a67cd344  PARALITH_0.4.16_x64_en-US.msi.sig`
+- `2ff01c646292bba9a6d7436811a6ca0df61cb653cc867a164b3af89030952fd8  PARALITH_0.4.16_x64-setup.exe`
+- `d39c7ec229da772a88f7712af04568ad85ed3b12e5ac2a2afffa66b95ca54db4  PARALITH_0.4.16_x64-setup.exe.sig`
