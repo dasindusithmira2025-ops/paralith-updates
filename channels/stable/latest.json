@@ -1,30 +1,30 @@
 {
-  "version": "0.4.16",
-  "notes": "Memory now follows project file changes from the Project session lifecycle instead of depending on Code Surface being open\n\nChanged source evidence can now supersede obsolete Memory and create current replacement knowledge with provenance\n\nRun Engine and Mission Control remain included with durable Project-scoped execution and orchestration surfaces\n\nSource Control remains focused on workspace worktrees while preserving queued repository operations\n\nStale or superseded Memory is no longer injected as normal current project truth during context compilation\n\nContext cache entries are invalidated when Memory is learned, superseded, marked stale, or candidate processing affects project truth\n\nLiteral/config source changes can update Memory deterministically without calling Claude or Codex\n\nAmbiguous source changes are routed to existing Memory review candidates instead of being silently promoted",
-  "pub_date": "2026-08-25T17:58:37.8574944Z",
+  "version": "0.4.17",
+  "notes": "Crash fixes across the application: panic routing through the file logger so every crash leaves a reconstructable log, terminal commands moved off the Tauri event loop, and a terminal-map lock stall eliminated\n\nTerminal pane headers rebuilt with progressive disclosure: the resting header carries identity, and working directory, process, and agent state are one hover away without rerendering the terminal\n\nRun Engine and Mission Control are removed: the durable execution and orchestration surfaces shipped experimentally in 0.4.16 are gone, their tables and code deleted, and existing data preserved untouched\n\nWorkspace canvas layout presets: named one-click layouts (tidy, grid, columns, rows) apply across docked and floating panes, with a new confirmation dialog for destructive pane-close actions\n\nEvery panic is now logged with thread, location, and payload before the default hook runs, so user-reported crashes are diagnosable from the support bundle alone\n\nSynchronous Tauri commands were blocking the event loop; all terminal, agent, window, workspace, and project commands now run asynchronously\n\nA single status poll no longer stalls the entire terminal surface: session-map handles are snapshotted before cloning 64 KiB output tails, releasing the map lock before any per-session copy\n\nLocal development builds now carry a private runtime identity so tauri dev cannot collide with an installed Stable or Preview process\n\nRemoved dead terminal-pane CSS and the unused headless terminal constructor left behind by earlier fixes\n\nVisual harness ?panes=N mode now renders live sessions for every pane, matching its documented purpose",
+  "pub_date": "2026-08-30T00:28:01.0403396Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29oUEtnUDJvYXlhWWcxRHhvNDhIRjZKZGRwd0MxUklRbCtzOFpCSUNHR25Zc3Rod2VsSkxsTXFXQ3RUdGtiVldUVUp4N2pvcjl6SThwTWZaRTFhYlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NC1zZXR1cC5leGUKQUM5c29yZk11L3RMck04TGJWeEQ2MFNZWEpOMjAzTFZaTk1uSk44Rnp4MzR1aTIzdHpyN2krdnlzRW9ZaUhmOEsyWWJlY3pBTzkrZ1owUWtxSzNVQ3c9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.17/PARALITH_0.4.17_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3QzRmpoWndtNVRBK0k0Y0grUUxjRk9WcTM0cWtMT3gvQjU2TXBoOGhHTVA3Q0FsS2pTUEQrS1NwS2l0SFZvMlNYbnJlNkppaDltS3p6Mm43OXJreEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDUwMzYwCWZpbGU6UEFSQUxJVEhfMC40LjE3X3g2NC1zZXR1cC5leGUKazFHdG5DTDdzdVdpNnpnY3ZvZGlWdHlhQzB0cXFKS25zUW1GZ1NkSlB3b2ZaaFptZWs4d2Q1b0lFcTRsU1Q3VkRWWndtOW1jbzQ2dzZzMGxYekxBRGc9PQo="
     },
     "windows-x86_64-nsis": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29oUEtnUDJvYXlhWWcxRHhvNDhIRjZKZGRwd0MxUklRbCtzOFpCSUNHR25Zc3Rod2VsSkxsTXFXQ3RUdGtiVldUVUp4N2pvcjl6SThwTWZaRTFhYlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NC1zZXR1cC5leGUKQUM5c29yZk11L3RMck04TGJWeEQ2MFNZWEpOMjAzTFZaTk1uSk44Rnp4MzR1aTIzdHpyN2krdnlzRW9ZaUhmOEsyWWJlY3pBTzkrZ1owUWtxSzNVQ3c9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.17/PARALITH_0.4.17_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3QzRmpoWndtNVRBK0k0Y0grUUxjRk9WcTM0cWtMT3gvQjU2TXBoOGhHTVA3Q0FsS2pTUEQrS1NwS2l0SFZvMlNYbnJlNkppaDltS3p6Mm43OXJreEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDUwMzYwCWZpbGU6UEFSQUxJVEhfMC40LjE3X3g2NC1zZXR1cC5leGUKazFHdG5DTDdzdVdpNnpnY3ZvZGlWdHlhQzB0cXFKS25zUW1GZ1NkSlB3b2ZaaFptZWs4d2Q1b0lFcTRsU1Q3VkRWWndtOW1jbzQ2dzZzMGxYekxBRGc9PQo="
     },
     "windows-x86_64-msi": {
-      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.16/PARALITH_0.4.16_x64_en-US.msi",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU29TamZZcEdlNW1tMU5wYXNDd0F3UHQ1L3hhZkRDWHJKZUdGN25sS21xOGRYM2V6M2ZMU2w0SXhYYVBQU0ljdzZpb2dadG44czc0NDhUbU9rS21DeUFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjgxNDI1CWZpbGU6UEFSQUxJVEhfMC40LjE2X3g2NF9lbi1VUy5tc2kKV1NwMlpVL2MyWGhPbmVKaGtBY3VPS0xqUVhsZFZFbzlJb1NJb2Jweno3cWRqVlpSWkJYcnNrMVFOVVVLbUM5UTVnbFIrKzYzTDVRZ0lCZHo4djUvQVE9PQo="
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.17/PARALITH_0.4.17_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3JyZ3JBeVhtVmc0UEJ2Z3lpQkF3di9FSTlCQVJYK1JqRlU0UkEvRkdURlc5K2tGWFd0Qk9GcWs4d2tzSEo2bnZwNjZ0N3d2bUpRZFRMa01wWW5uTGdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDUwMzYwCWZpbGU6UEFSQUxJVEhfMC40LjE3X3g2NF9lbi1VUy5tc2kKeTF3YTVzazdDcHlhbVlzeFJaaDFyYmlVd0ZPNS9DNmluQ3pvNnZhZVlZUUhoNkhhRXVWcW9LZU53aVdtWlhWUTM2dDM0TEx5K2QvdzRvdXA1bGJCQ1E9PQo="
     }
   },
   "paralith": {
     "edition": "stable",
     "channel": "stable",
-    "schemaVersion": 39,
+    "schemaVersion": 40,
     "minSchemaVersion": 1,
-    "maxSchemaVersion": 39,
+    "maxSchemaVersion": 40,
     "rolloutPercent": 100,
-    "commit": "f13704ae7979d96ea05abbbf113b5f025ad57abc",
-    "buildTimestamp": "2026-08-25T17:58:37.8574944Z",
+    "commit": "cb268ad7cf5f554266f18ec64dd13dc45077a42a",
+    "buildTimestamp": "2026-08-30T00:28:01.0403396Z",
     "previousInstallerUrl": null
   }
 }
