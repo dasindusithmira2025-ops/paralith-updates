@@ -1,0 +1,30 @@
+{
+  "version": "0.4.18",
+  "notes": "Paralith Brain provides one project-scoped intelligence contract for asking questions, retrieving evidence, exploring systems, and inspecting the exact context received by an agent run\n\nBrain answers are deterministic and evidence-backed: sources, related knowledge, history, confidence, staleness, and the number of considered records remain visible instead of being presented as generated certainty\n\nMemory is now presented as Brain across the project surface, with focused Ask, Explore, Activity, Decisions, Review, and Search workflows\n\nWorkspace surfaces share a consistent Files, Editor, Browser, and terminal-pane interaction model with progressive disclosure for secondary actions\n\nBrain reads and proposals are project-scoped through the existing Context Fabric boundary, while external-style proposals enter the candidate funnel instead of writing canonical truth directly\n\nBrain retains provenance for sources, related items, timeline history, and immutable per-run context so an answer can be inspected and challenged\n\nFile Explorer groups dot and system directories behind an explicit disclosure row without removing access to them\n\nEditor and Browser chrome use the same compact surface hierarchy, and empty editor state offers Quick Open plus real recently opened files",
+  "pub_date": "2026-09-01T18:48:26.7421881Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.18/PARALITH_0.4.18_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3EzVkc5VU9UVlRUbTVjSTZObzhlcXg2bUgrVWU1dndFZ0N0YVBRM28wSGFBblp5NVppeHU4WlBlSzRFRlpsZkFHbzkwSkd0dTBEQUNsMkJjNUdJekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Mjg5MjM2CWZpbGU6UEFSQUxJVEhfMC40LjE4X3g2NC1zZXR1cC5leGUKVStnc1RNSUEyak1xM0thYVBnN1B6MHdJSWRhVG1oVVdMZ2FVeERqQTNjMFVSVk9JNllyamZScUNQYmFIcUk1WVJCZmUxbDdnZEUvRWNnQ2hOd3U2REE9PQo="
+    },
+    "windows-x86_64-nsis": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.18/PARALITH_0.4.18_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU3EzVkc5VU9UVlRUbTVjSTZObzhlcXg2bUgrVWU1dndFZ0N0YVBRM28wSGFBblp5NVppeHU4WlBlSzRFRlpsZkFHbzkwSkd0dTBEQUNsMkJjNUdJekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Mjg5MjM2CWZpbGU6UEFSQUxJVEhfMC40LjE4X3g2NC1zZXR1cC5leGUKVStnc1RNSUEyak1xM0thYVBnN1B6MHdJSWRhVG1oVVdMZ2FVeERqQTNjMFVSVk9JNllyamZScUNQYmFIcUk1WVJCZmUxbDdnZEUvRWNnQ2hOd3U2REE9PQo="
+    },
+    "windows-x86_64-msi": {
+      "url": "https://github.com/dasindusithmira2025-ops/paralith-updates/releases/download/stable-v0.4.18/PARALITH_0.4.18_x64_en-US.msi",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUUm04clJuN1FKU2xNRTBtbUtRd0Y4Q282VE9ZUXM3dndyczdXQjhOY3U1RzJiSWtOS3hZQTdTdVBXbTlpdnpYYlp4TnllMVZjdUxkc0xFN0ZEYVBuc1B0Z3hwbWxVMXdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4Mjg5MjM2CWZpbGU6UEFSQUxJVEhfMC40LjE4X3g2NF9lbi1VUy5tc2kKcFlIOHI0Y1Z2Wnc0WGtpdWtiRlRwNUtSWEhvYzA5WWVPVkhhcjV4M1BBL05qbjdFbXAwUlUvaUk2WjhtdXFEY2l5UTEyS21yNmQvNmNteXRmVFpWRHc9PQo="
+    }
+  },
+  "paralith": {
+    "edition": "stable",
+    "channel": "stable",
+    "schemaVersion": 40,
+    "minSchemaVersion": 1,
+    "maxSchemaVersion": 40,
+    "rolloutPercent": 100,
+    "commit": "176d0d24fccdeced79213ac3a53a6aba7bd036e9",
+    "buildTimestamp": "2026-09-01T18:48:26.7421881Z",
+    "previousInstallerUrl": null
+  }
+}
