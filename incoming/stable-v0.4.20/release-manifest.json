@@ -1,0 +1,35 @@
+{
+  "formatVersion": 1,
+  "product": "PARALITH",
+  "edition": "stable",
+  "channel": "stable",
+  "version": "0.4.20",
+  "commit": "58dde0e3cacc1179c8b95ed0985170f98f6cf2ba",
+  "buildTimestamp": "2026-09-02T12:44:47.3897718Z",
+  "schemaVersion": 41,
+  "target": "windows",
+  "architecture": "x86_64",
+  "files": [
+    {
+      "name": "PARALITH_0.4.20_x64_en-US.msi",
+      "size": 16379904,
+      "sha256": "3db7079adf8637ba8239de8d750f2b805aa3d2c30dd43e2d9968b0bfef0e912f"
+    },
+    {
+      "name": "PARALITH_0.4.20_x64_en-US.msi.sig",
+      "size": 420,
+      "sha256": "29a50a91f008f795cdd4f5adcda8eed4ee34806b82984ca60f68a7ae8b95c707"
+    },
+    {
+      "name": "PARALITH_0.4.20_x64-setup.exe",
+      "size": 12467361,
+      "sha256": "64c1b8698b13245ff2e1e97fdbe2f3f8fc2fcf8701bc2eb86acff54e574595a2"
+    },
+    {
+      "name": "PARALITH_0.4.20_x64-setup.exe.sig",
+      "size": 420,
+      "sha256": "8f73cc2903d227c1fbe76bef4c2f10887f02f5dc06e33de7caf1607a58a4e946"
+    }
+  ],
+  "previousInstallerUrl": null
+}
