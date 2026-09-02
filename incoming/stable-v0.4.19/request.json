@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "repository": "dasindusithmira2025-ops/paralith-updates",
+  "tag": "stable-v0.4.19",
+  "channel": "stable",
+  "version": "0.4.19",
+  "title": "PARALITH Stable 0.4.19",
+  "prerelease": false,
+  "manifestSha256": "df9a2e84f416dbac1adfb956c2cefef21dfdcc182fb58f79e64f8726e6428dad"
+}
